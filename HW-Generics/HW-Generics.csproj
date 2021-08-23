@@ -44,8 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GenericArr.cs" />
+    <Compile Include="Question-4.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Question-3.cs" />
+    <Compile Include="Question-7.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

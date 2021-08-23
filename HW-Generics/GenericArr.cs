@@ -10,6 +10,7 @@ namespace HW_Generics
     {
         TD[] arr = new TD[100];
         bool isReadOnly;
+        
         public int Count { get; set; } = 0;
 
         public GenericArr()

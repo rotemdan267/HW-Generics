@@ -10,32 +10,64 @@ namespace HW_Generics
     {
         static void Main(string[] args)
         {
-            int[] arrr = new int[100];
-            for (int i = 0; i < 10; i++)
-            {
-                arrr[i] = i + 1;
-            }
-            GenericArr<int> arr = new GenericArr<int>(arrr, 10);
-            arr.ActivateReadOnlyMode();
-            try
-            {
-                arr.Add(84);
-            }
-            catch(InvalidOperationException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            arr.CancelReadOnlyMode();
-            try
-            {
-                arr.Add(84);
-                arr.Delete(5);
-            }
-            catch (InvalidOperationException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            #region Q2
 
+            //string[] arrr = new string[100];
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    arrr[i] = i + " 1";
+            //}
+            //GenericArr<string> arr = new GenericArr<string>(arrr, 10);
+            //arr.ActivateReadOnlyMode();
+            //try
+            //{
+            //    arr.Add("84");
+            //}
+            //catch(InvalidOperationException ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+            //arr.CancelReadOnlyMode();
+            //try
+            //{
+            //    arr.Add("84");
+            //    arr.Delete("2 1");
+            //}
+            //catch (InvalidOperationException ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+
+            #endregion
+
+            #region Q3
+
+            SortedLinkedList<char> arr = new SortedLinkedList<char>();
+            arr.Add('e');
+            arr.Add('c');
+            arr.Add('D');
+            arr.Add('B');
+
+            #endregion
+
+            #region Q4
+
+            Student s = new Student()
+            {
+                ID = 123456789,
+                Name = "Shmulik"
+            };
+            HandleID<Student> hid = new HandleID<Student>();
+            hid.ResetID(s);
+
+            #endregion
+
+            #region Q7
+
+            HandleNames<Student> hn = new HandleNames<Student>();
+            hn.PrintNameAndType(s);
+
+            #endregion
 
             Console.ReadLine();
 
