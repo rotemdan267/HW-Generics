@@ -11,7 +11,7 @@ namespace HW_Generics
         double ID { get; set; }
     }
     class HandleID<TD> where TD : IIdable
-    {
+    {    
         public void ResetID(TD td)
         {
             td.ID = 0;
@@ -21,5 +21,6 @@ namespace HW_Generics
     {
         public double ID { get; set; }
         public string Name { get; set; }
+
     }
 }

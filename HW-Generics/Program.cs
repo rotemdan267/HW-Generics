@@ -10,6 +10,14 @@ namespace HW_Generics
     {
         static void Main(string[] args)
         {
+            #region Q1
+
+            int[] arr1 = new int[4] { 4, 3, 8, 2 };
+            int[] arr2 = new int[6] { 8, 3, 2, 4, 5, 6 };
+            int[] arr3 = Combine<int>(arr1, arr2);
+
+            #endregion
+
             #region Q2
 
             //string[] arrr = new string[100];
@@ -71,6 +79,21 @@ namespace HW_Generics
 
             Console.ReadLine();
 
+        }
+        static T[] Combine<T>(T[] arr1, T[] arr2)
+        {
+            T[] arr3 = new T[arr1.Length + arr2.Length];
+            int count = 0;
+            for (int i = 0; i < arr1.Length; i++)
+            {
+                arr3[i] = arr1[i];
+            }
+            for (int i = arr1.Length; i < arr3.Length; i++)
+            {
+                arr3[i] = arr2[count];
+                count++;
+            }
+            return arr3;
         }
     }
 }
